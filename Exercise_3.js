@@ -1,37 +1,26 @@
-class Node {
-    constructor(d) {
-        this.data = d
-        this.next = null
-    }
-}
+  //Please read sample.java file before starting.
+  //Kindly include Time and Space complexity at top of each file
 class LinkedList {
     constructor() {
-        this.head = null
+        this.head = null; // head of linked list
     }
 
+    /* Linked list node */
+    static Node = class {
+        constructor(d) {
+            this.data = d;
+            this.next = null;
+        }
+    }
+
+    /* Function to print middle of linked list */
     printMiddle() {
-        
-        // Time Complexity : O(N)
-        // Space Complexity : O(1)
-       	//Implement using Fast and slow pointers
-        if (!this.head) {
-            console.log("Empty Linked List")
-            return
-        }
-        //Start Fast and Slow in the same spot
-        //According to the fast and Slow algorihtm slow will always we have the middle position than fast 
-        //as fast as travelling in twice the speed as slow
-        let slow = this.head
-        let fast = this.head
-        while (fast && fast.next) {
-            slow = slow.next
-            fast = fast.next.next
-        }
-        console.log("Middle element:",slow.data)
+        //Write your code here
+        //Implement using Fast and slow pointers
     }
 
     push(new_data) {
-        let new_node = new Node(new_data);
+        let new_node = new LinkedList.Node(new_data);
         new_node.next = this.head;
         this.head = new_node;
     }
@@ -46,8 +35,7 @@ class LinkedList {
     }
 }
 
-
-
+// Driver code
 let llist = new LinkedList();
 for (let i = 15; i > 0; --i) {
     llist.push(i);
